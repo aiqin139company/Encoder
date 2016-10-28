@@ -1,0 +1,6 @@
+﻿
+Debug/*.*
+
+
+/Project/JLinkLog.txt
+/UnityTest/Log/*.log

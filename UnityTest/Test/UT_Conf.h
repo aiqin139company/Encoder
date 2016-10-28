@@ -1,0 +1,2 @@
+#define	UT_MSGMANAGER
+
