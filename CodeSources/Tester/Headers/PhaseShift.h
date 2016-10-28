@@ -2,7 +2,7 @@
 #define _PHASE_SHIFT_H_
 #include "BaseTester.h"
 
-class PhaseShift : public BaseTester
+class PhaseShift : public BaseEncoder
 {
 private:
 

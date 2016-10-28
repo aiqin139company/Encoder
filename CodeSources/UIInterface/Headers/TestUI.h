@@ -2,7 +2,7 @@
 #define _START_STOP_TEST_UI_H_
 #include "UIInterface.h"
 
-class StartStopTestUI : public UIInterface
+class TestUI : public UIInterface
 {
 private:
 	
@@ -11,6 +11,7 @@ private:
 
 public:
 	
+	virtual int Show();
 	virtual int Show(int operation);
 
 };

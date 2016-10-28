@@ -1,9 +1,17 @@
 #include "CommUI.h"
 
 ///Show
+int CommUI::Show()
+{
+	return Show(selVal);
+}
+
+
+///Show
 int CommUI::Show(int operation)
 {
-
+	selVal = operation;
+	operation ? TxMessage() : RxMessage();
 	return 0;
 }
 

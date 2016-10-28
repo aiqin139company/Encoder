@@ -93,7 +93,7 @@ int BSPManager::ClearLcd()
 
 
 ///Write Lcd
-int BSPManager::WriteLcd(u8 x, u8 y, u8 size, u8 *data)
+int BSPManager::WriteLcd(u8 x, u8 y, u8 *data)
 {
 
 	return 0;

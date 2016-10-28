@@ -1,19 +1,17 @@
-#ifndef _COMM_UI_H_
-#define _COMM_UI_H_
+#ifndef _HOME_UI_H_
+#define _HOME_UI_H_
 #include "UIInterface.h"
 
-class CommUI : public UIInterface
+class HomeUI : public UIInterface
 {
 private:
-	
-	int TxMessage();
-	int RxMessage();
 
 public:
-
+		
 	virtual int Show();
 	virtual int Show(int operation);
 
 };
+
 
 #endif

@@ -1,7 +1,7 @@
 #include "BaseTester.h"
 
 ///Start
-int BaseTester::Start()
+int BaseEncoder::Start()
 {
 
 	return 0;
@@ -9,7 +9,7 @@ int BaseTester::Start()
 
 
 ///Stop
-int BaseTester::Stop()
+int BaseEncoder::Stop()
 {
 
 	return 0;
@@ -17,7 +17,7 @@ int BaseTester::Stop()
 
 
 ///GetInfo
-int BaseTester::GetInfo()
+int BaseEncoder::GetInfo()
 {
 
 	return 0;

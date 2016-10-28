@@ -721,7 +721,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Tester</GroupName>
+          <GroupName>Encoder</GroupName>
           <Files>
             <File>
               <FileName>BaseTester.cpp</FileName>
@@ -764,19 +764,29 @@
               <FilePath>..\CodeSources\UIInterface\Source\DriverUI.cpp</FilePath>
             </File>
             <File>
-              <FileName>StartStopTestUI.cpp</FileName>
+              <FileName>HomeUI.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>..\CodeSources\UIInterface\Source\StartStopTestUI.cpp</FilePath>
+              <FilePath>..\CodeSources\UIInterface\Source\HomeUI.cpp</FilePath>
             </File>
             <File>
-              <FileName>TesterUI.cpp</FileName>
+              <FileName>MenuUI.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>..\CodeSources\UIInterface\Source\TesterUI.cpp</FilePath>
+              <FilePath>..\CodeSources\UIInterface\Source\MenuUI.cpp</FilePath>
             </File>
             <File>
-              <FileName>FixedUI.cpp</FileName>
+              <FileName>EncoderUI.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>..\CodeSources\UIInterface\Source\FixedUI.cpp</FilePath>
+              <FilePath>..\CodeSources\UIInterface\Source\EncoderUI.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>SettingsUI.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\CodeSources\UIInterface\Source\SettingsUI.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>TestUI.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\CodeSources\UIInterface\Source\TestUI.cpp</FilePath>
             </File>
           </Files>
         </Group>

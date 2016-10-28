@@ -763,7 +763,7 @@
 
   <Group>
     <GroupName>BSP</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1028,7 +1028,7 @@
   </Group>
 
   <Group>
-    <GroupName>Tester</GroupName>
+    <GroupName>Encoder</GroupName>
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
@@ -1140,8 +1140,8 @@
       <Focus>0</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CodeSources\UIInterface\Source\StartStopTestUI.cpp</PathWithFileName>
-      <FilenameWithoutPath>StartStopTestUI.cpp</FilenameWithoutPath>
+      <PathWithFileName>..\CodeSources\UIInterface\Source\HomeUI.cpp</PathWithFileName>
+      <FilenameWithoutPath>HomeUI.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1153,8 +1153,8 @@
       <Focus>0</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CodeSources\UIInterface\Source\TesterUI.cpp</PathWithFileName>
-      <FilenameWithoutPath>TesterUI.cpp</FilenameWithoutPath>
+      <PathWithFileName>..\CodeSources\UIInterface\Source\MenuUI.cpp</PathWithFileName>
+      <FilenameWithoutPath>MenuUI.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1166,8 +1166,34 @@
       <Focus>0</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CodeSources\UIInterface\Source\FixedUI.cpp</PathWithFileName>
-      <FilenameWithoutPath>FixedUI.cpp</FilenameWithoutPath>
+      <PathWithFileName>..\CodeSources\UIInterface\Source\EncoderUI.cpp</PathWithFileName>
+      <FilenameWithoutPath>EncoderUI.cpp</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>8</GroupNumber>
+      <FileNumber>68</FileNumber>
+      <FileType>8</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\CodeSources\UIInterface\Source\SettingsUI.cpp</PathWithFileName>
+      <FilenameWithoutPath>SettingsUI.cpp</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>8</GroupNumber>
+      <FileNumber>69</FileNumber>
+      <FileType>8</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\CodeSources\UIInterface\Source\TestUI.cpp</PathWithFileName>
+      <FilenameWithoutPath>TestUI.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

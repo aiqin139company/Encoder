@@ -19,7 +19,7 @@ private:
 	BSPManager*			bsp;
 
 	BaseDriver*			bDrv;
-	BaseTester*			bTester;
+	BaseEncoder*		bEncoder;
 	UIInterface*		bUI;
 
 	RunMode					runMode; 
@@ -35,7 +35,7 @@ private:
 	int MenuSelect();
 	int SetDriver();
 	int SetEncoder();
-	int SetTest();
+	int Settings();
 	int StartStopTest();
 	int Monitor();
 

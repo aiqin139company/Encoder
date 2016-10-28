@@ -38,19 +38,26 @@ void ControlManager::Execute()
 ///Controller
 void ControlManager::Controller()
 {
+	static RunMode localRunMode = homeSelectMode;
+	
 	switch( runMode )
 	{
 		case homeSelectMode 		: HomeSelect();			break;
 		case menuSelectMode 		: MenuSelect(); 		break;
 		case setDriverMode 			: SetDriver(); 			break;
 		case setEncoderMode 		: SetEncoder(); 		break;
-		case setTestMode				: SetTest();				break;
-		case startStopTestMode 	: StartStopTest();	break;
+		case settingsMode				: Settings();				break;
+		case testMode 					: StartStopTest();	break;
 		default : break;
 	}
-	bUI->Show(keyVal);
-	ui.ChangeUI(runMode,selectMode);
-	bUI = ui.GetUI();
+
+	if ( localRunMode != runMode )
+	{
+		localRunMode = runMode;
+		ui.ChangeUI(runMode);
+		bUI = ui.GetUI();
+		bUI->Show();
+	}
 }
 
 
@@ -72,11 +79,13 @@ int ControlManager::HomeSelect()
 		switch( localSelect )
 		{
 			case selectMenu : runMode = menuSelectMode; break;
-			case selectTest : runMode = startStopTestMode; break;
+			case selectTest : runMode = testMode; break;
 			default : break;
 		}
+		return 0;
 	}
 	
+	bUI->Show(localSelect);
 	selectMode = localSelect;
 	
 	return 0;
@@ -100,6 +109,7 @@ int ControlManager::MenuSelect()
 	else if ( KEY_CANCEL == keyVal )
 	{
 		runMode = homeSelectMode;
+		return 0;
 	}
 	else if ( KEY_CONFIRM == keyVal )
 	{
@@ -107,19 +117,21 @@ int ControlManager::MenuSelect()
 		{
 			case selectDriver : runMode = setDriverMode; break;
 			case selectEncoder : runMode = setEncoderMode; break;
-			case selectSetTest : runMode = setTestMode; break;
+			case selectSettings : runMode = settingsMode; break;
 			default : break;
 		}
+		return 0;
 	}
 	
 	switch ( selectLoop )
 	{
 		case 0 : localSelect = selectDriver; break;
 		case 1 : localSelect = selectEncoder; break;
-		case 2 : localSelect = selectSetTest; break;
+		case 2 : localSelect = selectSettings; break;
 		default : break;
 	}
 	
+	bUI->Show(selectLoop);
 	selectMode = localSelect;
 
 	return 0;
@@ -142,12 +154,15 @@ int ControlManager::SetDriver()
 	else if ( KEY_CANCEL == keyVal )
 	{
 		runMode = menuSelectMode;
+		return 0;
 	}
 	else if ( KEY_CONFIRM == keyVal )
 	{
 		bDrv = driver.GetDriver();
+		return 0;
 	}
 	
+	bUI->Show(selectLoop);
 	driver.ChangeDriver(selectLoop);
 	
 	return 0;
@@ -173,17 +188,18 @@ int ControlManager::SetEncoder()
 	}
 	else if ( KEY_CONFIRM == keyVal )
 	{
-		bTester = encoder.GetTester();
+		bEncoder = encoder.GetEncoder();
 	}
 	
-	encoder.ChangeTester(selectLoop);
+	bUI->Show(selectLoop);
+	encoder.ChangeEncoder(selectLoop);
 	
 	return 0;
 }
 
 
 ///Set Test
-int ControlManager::SetTest()
+int ControlManager::Settings()
 {
 	if ( KEY_UP == keyVal )
 	{
@@ -221,8 +237,8 @@ int ControlManager::StartStopTest()
 	else if ( KEY_CONFIRM == keyVal )
 	{
 		localSelect = selectStartTest;
-		bTester->Start();
 		bDrv->Start();
+		bEncoder->Start();
 	}
 	
 	selectMode = localSelect;
@@ -236,7 +252,11 @@ int ControlManager::Monitor()
 {
 	if ( selectStartTest == selectMode )
 	{
-		
+		bUI->Show(1);
+	}
+	else if ( selectEncoder == selectMode )
+	{
+	
 	}
 	
 	return 0;

@@ -8,20 +8,20 @@ int EncoderManager::Initialize()
 
 
 ///Get Tester
-BaseTester* EncoderManager::GetTester()
+BaseEncoder* EncoderManager::GetEncoder()
 {
-	return bTest;
+	return bEncoder;
 }
 
 
 ///Change Tester
-int EncoderManager::ChangeTester(int selVal)
+int EncoderManager::ChangeEncoder(int selVal)
 {
-	switch ( (SelTester)selVal )
+	switch ( (SelEncoder)selVal )
 	{
-		case captureTest : bTest = &CaptureTest; break;
-		case countPulse : bTest = &CountPulse; break;
-		case phaseShift : bTest = &PhaseShift; break;
+		case captureTest : bEncoder = &CaptureTest; break;
+		case countPulse : bEncoder = &CountPulse; break;
+		case phaseShift : bEncoder = &PhaseShift; break;
 		default : break;
 	}
 	return 0;

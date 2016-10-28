@@ -8,8 +8,8 @@ enum RunMode
 	menuSelectMode,
 	setDriverMode,
 	setEncoderMode,
-	setTestMode,
-	startStopTestMode,
+	settingsMode,
+	testMode,
 };
 
 
@@ -21,7 +21,7 @@ enum SelectMode
 	selectTest,
 	selectDriver,
 	selectEncoder,
-	selectSetTest,
+	selectSettings,
 	selectStartTest,
 	selectStopTest,
 };

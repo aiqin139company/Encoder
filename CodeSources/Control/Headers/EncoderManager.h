@@ -5,7 +5,7 @@
 #include "CountPulse.h"
 #include "PhaseShift.h"
 
-enum SelTester
+enum SelEncoder
 {
 	captureTest = 0,
 	countPulse,
@@ -17,7 +17,7 @@ class EncoderManager
 {
 private:
 
-	BaseTester* bTest;
+	BaseEncoder* bEncoder;
 	CaptureTest CaptureTest;
 	CountPulse	CountPulse;
 	PhaseShift  PhaseShift;
@@ -25,8 +25,8 @@ private:
 public:
 
 	int Initialize();
-	BaseTester* GetTester();
-	int ChangeTester(int selVal);
+	BaseEncoder* GetEncoder();
+	int ChangeEncoder(int selVal);
 
 };
 

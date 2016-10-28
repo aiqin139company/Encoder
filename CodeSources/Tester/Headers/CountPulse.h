@@ -2,7 +2,7 @@
 #define _COUNT_PULSE_H_
 #include "BaseTester.h"
 
-class CountPulse : public BaseTester
+class CountPulse : public BaseEncoder
 {
 private:
 

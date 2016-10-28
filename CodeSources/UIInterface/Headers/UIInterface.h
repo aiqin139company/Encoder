@@ -9,8 +9,11 @@ private:
 
 public:
 	
+	int selVal;
 	BSPManager* bsp;
+
 	UIInterface() { bsp = BSPManager::Instance(); }
+	virtual int Show();
 	virtual int Show(int operation);
 
 };

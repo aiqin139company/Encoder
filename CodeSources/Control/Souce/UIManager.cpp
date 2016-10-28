@@ -3,8 +3,8 @@
 ///Initialize
 int UIManager::Initialize()
 {
-	uiInterface = &FixedUI;
-	uiInterface->Show(0);
+	uiInterface = &HomeUI;
+	uiInterface->Show(1);
 	return 0;
 }
 
@@ -17,16 +17,16 @@ UIInterface* UIManager::GetUI()
 
 
 ///Change UI
-int UIManager::ChangeUI(RunMode runMode,SelectMode selectMode)
+int UIManager::ChangeUI(RunMode runMode)
 {
 	switch( runMode )
 	{
-		case homeSelectMode :
-		case menuSelectMode : uiInterface = &FixedUI; break;
+		case homeSelectMode : uiInterface = &HomeUI; break;
+		case menuSelectMode : uiInterface = &MenuUI; break;
 		case setDriverMode  : uiInterface = &DriverUI; break;
-		case setEncoderMode : uiInterface = &TesterUI; break;
-		case setTestMode    : 
-		case startStopTestMode : uiInterface = &StartStopTestUI; break;
+		case setEncoderMode : uiInterface = &EncoderUI; break;
+		case settingsMode   : uiInterface = &SettingsUI; break;
+		case testMode			  : uiInterface = &TestUI; break;
 		default : break;
 	}
 	

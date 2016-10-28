@@ -1,13 +1,10 @@
-#ifndef _COMM_UI_H_
-#define _COMM_UI_H_
+#ifndef _ENCODER_UI_H_
+#define _ENCODER_UI_H_
 #include "UIInterface.h"
 
-class CommUI : public UIInterface
+class EncoderUI : public UIInterface
 {
 private:
-	
-	int TxMessage();
-	int RxMessage();
 
 public:
 
@@ -17,3 +14,4 @@ public:
 };
 
 #endif
+

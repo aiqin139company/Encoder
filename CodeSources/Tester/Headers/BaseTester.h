@@ -1,15 +1,15 @@
-#ifndef _BASE_TESTER_H_
-#define _BASE_TESTER_H_
+#ifndef _BASE_ENCODER_H_
+#define _BASE_ENCODER_H_
 #include "BSPManager.h"
 
-class BaseTester
+class BaseEncoder
 {
 private:
 
 public:
 	
 	BSPManager* bsp;
-	BaseTester() { bsp = BSPManager::Instance(); }
+	BaseEncoder() { bsp = BSPManager::Instance(); }
 	virtual int Start();
 	virtual int Stop();
 	virtual int	GetInfo();

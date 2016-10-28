@@ -2,7 +2,7 @@
 #define _CAPTURE_TEST_H_
 #include "BaseTester.h"
 
-class CaptureTest : public BaseTester
+class CaptureTest : public BaseEncoder
 {
 private:
 		
