@@ -5,11 +5,13 @@
 class StartStopTestUI : public UIInterface
 {
 private:
-
-public:
 	
 	int StartTest();
 	int StopTest();
+
+public:
+	
+	virtual int Show(int operation);
 
 };
 

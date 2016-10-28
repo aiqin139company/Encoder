@@ -5,14 +5,16 @@
 class DriverUI : public UIInterface
 {
 private:
-
-public:
 	
 	int DCBrushed();
 	int StepDirSignal();
 	int ACBrushed();
 	int Stepper();
 	int Switch();
+
+public:
+	
+	virtual int Show(int operation);
 
 };
 

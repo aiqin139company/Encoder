@@ -5,11 +5,13 @@
 class FixedUI : public UIInterface
 {
 private:
+	
+	int Home();
+	int Menu();
 
 public:
 
-	int Home();
-	int Menu();
+	virtual int Show(int operation);
 	
 };
 

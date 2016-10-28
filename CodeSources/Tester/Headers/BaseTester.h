@@ -8,6 +8,8 @@ private:
 
 public:
 	
+	BSPManager* bsp;
+	BaseTester() { bsp = BSPManager::Instance(); }
 	virtual int Start();
 	virtual int Stop();
 	virtual int	GetInfo();

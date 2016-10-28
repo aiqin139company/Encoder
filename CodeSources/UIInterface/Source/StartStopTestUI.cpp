@@ -1,5 +1,13 @@
 #include "StartStopTestUI.h"
 
+///Show
+int StartStopTestUI::Show(int operation)
+{
+
+	return 0;
+}
+
+
 ///Start Test
 int StartStopTestUI::StartTest()
 {

@@ -5,9 +5,11 @@
 class BaseDriver
 {
 private:
-
+	
 public:
-
+	
+	BSPManager* bsp;
+	BaseDriver() : bsp(BSPManager::Instance()) {}
 	virtual int Start();
 	virtual int Stop();
 	virtual int Enable();

@@ -37,6 +37,7 @@ public:
 	void Delay_ms(u32 timer);
 	int ReadKey(u8 mode);
 	int WriteLed(u8 LedStatus);
+	int ClearLcd();
 	int WriteLcd(u8 x, u8 y, u8 size, u8 *data);
 	int ReadUart(u8 size, u8 *data);
 	int WriteUart(u8 size, u8 *data);

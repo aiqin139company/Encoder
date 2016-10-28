@@ -5,11 +5,13 @@
 class CommUI : public UIInterface
 {
 private:
+	
+	int TxMessage();
+	int RxMessage();
 
 public:
 
-	int TxMessage();
-	int RxMessage();
+	virtual int Show(int operation);
 
 };
 

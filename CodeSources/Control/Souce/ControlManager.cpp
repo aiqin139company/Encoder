@@ -48,6 +48,7 @@ void ControlManager::Controller()
 		case startStopTestMode 	: StartStopTest();	break;
 		default : break;
 	}
+	bUI->Show(keyVal);
 	ui.ChangeUI(runMode,selectMode);
 	bUI = ui.GetUI();
 }
@@ -225,7 +226,7 @@ int ControlManager::StartStopTest()
 	}
 	
 	selectMode = localSelect;
-	
+
 	return 0;
 }
 

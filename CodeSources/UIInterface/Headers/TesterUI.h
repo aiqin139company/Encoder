@@ -5,13 +5,15 @@
 class TesterUI : UIInterface
 {
 private:
-
-public:
-
+	
 	int ChangeInputSignal();
 	int CaptureTest();
 	int CountPulse();
 	int PhaseShift();
+
+public:
+
+	virtual int Show(int operation);
 
 };
 

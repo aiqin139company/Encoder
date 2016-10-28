@@ -1,5 +1,12 @@
 #include "CommUI.h"
 
+///Show
+int CommUI::Show(int operation)
+{
+
+	return 0;
+}
+
 ///TxMessage
 int CommUI::TxMessage()
 {

@@ -84,6 +84,14 @@ int BSPManager::WriteLed(u8 LedStatus)
 }
 
 
+///Clear Lcd
+int BSPManager::ClearLcd()
+{
+
+	return 0;
+}
+
+
 ///Write Lcd
 int BSPManager::WriteLcd(u8 x, u8 y, u8 size, u8 *data)
 {

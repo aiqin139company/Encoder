@@ -8,11 +8,11 @@
 #include "Switch.h"
 
 enum SelDriver
-{
-	acBrushless = 0,
-	dcBrushless,
+{	
+	stepper = 0,
+	acBrushless, 
+	dcBrushed,
 	stepDirSignal,
-	stepper,
 	switchSignal,
 	DRIVERSIZES
 };

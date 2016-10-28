@@ -20,10 +20,10 @@ int DriverManager::ChangeDriver(int selVal)
 {
 	switch ( (SelDriver)selVal )
 	{
-		case acBrushless 	: bDrv = &ACBrushless; 	break;
-		case dcBrushless 	: bDrv = &DCBrushed; 		break;
-		case stepDirSignal: bDrv = &StepDirSignal; break;
 		case stepper 			: bDrv = &Stepper; 			break;
+		case acBrushless 	: bDrv = &ACBrushless; 	break;
+		case dcBrushed  	: bDrv = &DCBrushed; 		break;
+		case stepDirSignal: bDrv = &StepDirSignal; break;	
 		case switchSignal : bDrv = &Switch; 			break;
 		default : break;
 	}

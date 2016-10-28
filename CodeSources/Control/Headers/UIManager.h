@@ -19,7 +19,6 @@ public:
 	int Initialize();
 	UIInterface* GetUI();
 	int ChangeUI(RunMode runMode,SelectMode selectMode);
-	int ShowUI();
 
 };
 
