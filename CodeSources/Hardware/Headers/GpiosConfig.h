@@ -7,6 +7,7 @@
 
 #include "stm32f4xx.h" 
 #include "cm4_system_nvic.h"		 
+#include "BitBand.h"
 	 
 //ENABLE PIN
 #define ENABLE_KEY 			( (GPIOC->IDR & 0x1<<13) ? 1 : 0 )	 

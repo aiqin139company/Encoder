@@ -20,6 +20,7 @@ private:
 
 	BaseDriver*			bDrv;
 	BaseEncoder*		bEncoder;
+	BaseComm*				bComm;
 	UIInterface*		bUI;
 
 	RunMode					runMode; 

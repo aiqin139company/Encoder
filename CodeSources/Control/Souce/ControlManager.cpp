@@ -26,7 +26,7 @@ void ControlManager::Initialize()
 ///Execute
 void ControlManager::Execute()
 {
-	while(1)
+	for(;;)
 	{
 		keyVal = bsp->ReadKey(KEY_SINGLE);
 		if (keyVal)	Controller();
@@ -62,17 +62,20 @@ void ControlManager::Controller()
 
 
 ///Home Select
-int ControlManager::HomeSelect()
+inline int ControlManager::HomeSelect()
 {
 	static SelectMode localSelect = selectMenu;
+	static short selectLoop = 0;
 	
 	if ( KEY_UP == keyVal )
 	{
 		localSelect = selectMenu;
+		selectLoop = 0;
 	}
 	else if ( KEY_DOWN == keyVal )
 	{
 		localSelect = selectTest;
+		selectLoop = 1;
 	}
 	else if ( KEY_CONFIRM == keyVal )
 	{
@@ -85,26 +88,26 @@ int ControlManager::HomeSelect()
 		return 0;
 	}
 	
-	bUI->Show(localSelect);
-	selectMode = localSelect;
+	bUI->Show(selectLoop);
 	
 	return 0;
 }
 
 
 ///Select Menu
-int ControlManager::MenuSelect()
+inline int ControlManager::MenuSelect()
 {
+	const short MenuListMax = 2;
 	static SelectMode localSelect = selectDriver;
 	static short selectLoop = 0;
 	
 	if ( KEY_UP == keyVal )
 	{
-		if ( --selectLoop < 0 ) selectLoop = 2;
+		if ( --selectLoop < 0 ) selectLoop = MenuListMax;
 	}
 	else if ( KEY_DOWN == keyVal )
 	{
-		if ( ++selectLoop > 2 ) selectLoop = 0;
+		if ( ++selectLoop > MenuListMax ) selectLoop = 0;
 	}
 	else if ( KEY_CANCEL == keyVal )
 	{
@@ -132,14 +135,13 @@ int ControlManager::MenuSelect()
 	}
 	
 	bUI->Show(selectLoop);
-	selectMode = localSelect;
 
 	return 0;
 }
 
 
 ///Set Driver
-int ControlManager::SetDriver()
+inline int ControlManager::SetDriver()
 {
 	static short selectLoop = 0;
 	
@@ -170,7 +172,7 @@ int ControlManager::SetDriver()
 
 
 ///Set Encoder
-int ControlManager::SetEncoder()
+inline int ControlManager::SetEncoder()
 {
 	static short selectLoop = 0;
 	
@@ -199,7 +201,7 @@ int ControlManager::SetEncoder()
 
 
 ///Set Test
-int ControlManager::Settings()
+inline int ControlManager::Settings()
 {
 	if ( KEY_UP == keyVal )
 	{
@@ -223,7 +225,7 @@ int ControlManager::Settings()
 
 
 ///Start Stop Test
-int ControlManager::StartStopTest()
+inline int ControlManager::StartStopTest()
 {
 	static SelectMode localSelect = selectStopTest;
 	
@@ -238,7 +240,6 @@ int ControlManager::StartStopTest()
 	{
 		localSelect = selectStartTest;
 		bDrv->Start();
-		bEncoder->Start();
 	}
 	
 	selectMode = localSelect;
@@ -248,15 +249,15 @@ int ControlManager::StartStopTest()
 
 
 ///Monitor
-int ControlManager::Monitor()
+inline int ControlManager::Monitor()
 {
 	if ( selectStartTest == selectMode )
 	{
-		bUI->Show(1);
-	}
-	else if ( selectEncoder == selectMode )
-	{
-	
+		if ( bDrv->IsFullSpeed() )
+		{
+			bEncoder->Start();
+		}
+		bUI->Show();
 	}
 	
 	return 0;

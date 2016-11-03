@@ -363,9 +363,9 @@
             <useXO>0</useXO>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>ARM_MATH_CM4,STM32F40XX,USE_STDPERIPH_DRIVER,UT_TEST1</Define>
+              <Define>ARM_MATH_CM4,STM32F40XX,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\DeviceSupport\CMSIS;..\DeviceSupport\CMSIS\Include;..\DeviceSupport\SYS_NVIC;..\DeviceSupport\STM32F4xx_StdPeriph_Driver\inc;..\UnityTest\Src;..\UnityTest\Test;..\CodeSources\Control\Headers;..\CodeSources\Driver\Headers;..\CodeSources\Hardware\Headers;..\CodeSources\Tester\Headers;..\CodeSources\UIInterface\Headers</IncludePath>
+              <IncludePath>..\DeviceSupport\CMSIS;..\DeviceSupport\CMSIS\Include;..\DeviceSupport\SYS_NVIC;..\DeviceSupport\STM32F4xx_StdPeriph_Driver\inc;..\UnityTest\Src;..\UnityTest\Test;..\CodeSources\Control\Headers;..\CodeSources\Driver\Headers;..\CodeSources\Hardware\Headers;..\CodeSources\Tester\Headers;..\CodeSources\UIInterface\Headers;..\CodeSources\Communication\Headers</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -621,31 +621,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>UnityTest</GroupName>
-          <Files>
-            <File>
-              <FileName>unity.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\UnityTest\Src\unity.c</FilePath>
-            </File>
-            <File>
-              <FileName>UT_MsgManager.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>..\UnityTest\Test\UT_MsgManager.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>UT_FaultManager.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>..\UnityTest\Test\UT_FaultManager.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>UT_ParamManager.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>..\UnityTest\Test\UT_ParamManager.cpp</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>Control</GroupName>
           <Files>
             <File>
@@ -742,6 +717,21 @@
               <FileName>PhaseShift.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>..\CodeSources\Tester\Source\PhaseShift.cpp</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Communication</GroupName>
+          <Files>
+            <File>
+              <FileName>BaseComm.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\CodeSources\Communication\Source\BaseComm.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>SciComm.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\CodeSources\Communication\Source\SciComm.cpp</FilePath>
             </File>
           </Files>
         </Group>

@@ -23,3 +23,11 @@ int BaseEncoder::GetInfo()
 	return 0;
 }
 
+
+///Change input signal
+int BaseEncoder::ChangeInputSignal(int signal)
+{
+
+	return 0;
+}
+

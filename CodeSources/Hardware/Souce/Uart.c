@@ -91,6 +91,7 @@ int UartWrite(u16 num, u8 *p)
 	return num;
 }
 
+
 //fputc( printf )
 int fputc(int c, FILE *file)
 {

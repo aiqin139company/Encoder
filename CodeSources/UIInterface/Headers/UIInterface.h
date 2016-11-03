@@ -12,7 +12,7 @@ public:
 	int selVal;
 	BSPManager* bsp;
 
-	UIInterface() { bsp = BSPManager::Instance(); }
+	UIInterface() { bsp = BSPManager::Instance(); selVal = 0; }
 	virtual int Show();
 	virtual int Show(int operation);
 

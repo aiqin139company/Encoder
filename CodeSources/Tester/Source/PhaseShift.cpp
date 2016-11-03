@@ -23,3 +23,11 @@ int PhaseShift::GetInfo()
 	return 0;
 }
 
+
+///Change input signal
+int PhaseShift::ChangeInputSignal(int signal)
+{
+
+	return 0;
+}
+

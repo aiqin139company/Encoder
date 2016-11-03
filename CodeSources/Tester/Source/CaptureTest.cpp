@@ -23,3 +23,10 @@ int CaptureTest::GetInfo()
 	return 0;
 }
 
+///Change input signal
+int CaptureTest::ChangeInputSignal(int signal)
+{
+
+	return 0;
+}
+

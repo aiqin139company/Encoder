@@ -6,12 +6,13 @@ int HomeUI::Show()
 	return Show(selVal);
 }
 
+
 ///Home UI
 int HomeUI::Show(int operation)
 {
 	selVal = operation;
 	bsp->ClearLcd();
-	bsp->WriteLcd(selVal,4,(u8*)"*");
+	bsp->WriteLcd(selVal+1,4,(u8*)"*");
 	bsp->WriteLcd(1,6,(u8*)"ÉèÖÃ");
 	bsp->WriteLcd(2,6,(u8*)"²âÊÔ");
 	bsp->WriteLcd(3,0,(u8*)"È·¶¨");

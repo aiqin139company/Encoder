@@ -23,3 +23,10 @@ int CountPulse::GetInfo()
 	return 0;
 }
 
+///Change input signal
+int CountPulse::ChangeInputSignal(int signal)
+{
+
+	return 0;
+}
+

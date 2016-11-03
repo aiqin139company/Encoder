@@ -11,6 +11,7 @@ public:
 	virtual int Start();
 	virtual int Stop();
 	virtual int GetInfo();
+	virtual int ChangeInputSignal(int signal);
 
 };
 

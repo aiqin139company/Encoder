@@ -3,39 +3,26 @@
 ///Initialize
 int CommManager::Initialize()
 {
-
-	return 0;
+	return COMMSIZES-1;
 }
 
 
 ///Get MSG
-int CommManager::GetMsg()
+BaseComm* CommManager::GetMsg()
 {
-
-	return 0;
+	return bComm;
 }
 
 
 ///Change MSG 
-int CommManager::ChangeMsg()
+int CommManager::ChangeMsg(int selVal)
 {
-
+	switch ( (SelComm)selVal )
+	{
+		case sci 			: bComm = &SciComm; 			break;
+		default : break;
+	}
 	return 0;
 }
 
-
-///TxMessage
-int CommManager::TxMessage()
-{
-
-	return 0;
-}
-
-
-///RxMessage
-int CommManager::RxMessage()
-{
-
-	return 0;
-}
 

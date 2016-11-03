@@ -1,20 +1,26 @@
 #ifndef _COMM_MANAGER_H_
 #define _COMM_MANAGER_H_
-#include "BSPManager.h"
+#include "BaseComm.h"
+#include "SciComm.h"
+
+enum SelComm
+{	
+	sci = 0,
+	COMMSIZES
+};
 
 class CommManager
 {
 private:
-
-	BSPManager* bsp;
+	
+	BaseComm* bComm;
+	SciComm   SciComm;
 
 public:
 
 	int Initialize();
-	int GetMsg();
-	int ChangeMsg();
-	int TxMessage();
-	int RxMessage();
+	BaseComm* GetMsg();
+	int ChangeMsg(int selVal);
 
 };
 
