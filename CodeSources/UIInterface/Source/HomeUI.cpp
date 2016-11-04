@@ -12,11 +12,11 @@ int HomeUI::Show(int operation)
 {
 	selVal = operation;
 	bsp->ClearLcd();
-	bsp->WriteLcd(selVal+1,4,(u8*)"*");
-	bsp->WriteLcd(1,6,(u8*)"设置");
-	bsp->WriteLcd(2,6,(u8*)"测试");
-	bsp->WriteLcd(3,0,(u8*)"确定");
-	bsp->WriteLcd(3,12,(u8*)"取消");
+	bsp->WriteLcd(4,selVal+1,(u8*)"*");
+	bsp->WriteLcd(6,1,(u8*)"设置");
+	bsp->WriteLcd(6,2,(u8*)"测试");
+	bsp->WriteLcd(0,3,(u8*)"确定");
+	bsp->WriteLcd(12,3,(u8*)"取消");
 	
 	return 0;
 }

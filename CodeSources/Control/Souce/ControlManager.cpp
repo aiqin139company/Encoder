@@ -42,12 +42,12 @@ void ControlManager::Controller()
 	
 	switch( runMode )
 	{
-		case homeSelectMode 		: HomeSelect();			break;
-		case menuSelectMode 		: MenuSelect(); 		break;
-		case setDriverMode 			: SetDriver(); 			break;
-		case setEncoderMode 		: SetEncoder(); 		break;
-		case settingsMode				: Settings();				break;
-		case testMode 					: StartStopTest();	break;
+		case homeSelectMode : HomeSelect();			break;
+		case menuSelectMode : MenuSelect(); 		break;
+		case setDriverMode 	: SetDriver(); 			break;
+		case setEncoderMode : SetEncoder(); 		break;
+		case settingsMode		: Settings();				break;
+		case testMode 			: StartStopTest();	break;
 		default : break;
 	}
 

@@ -6,7 +6,6 @@
 #endif
 
 #include "stm32f4xx.h" 
-#include "GpiosConfig.h"
 #include "I2c.h"
 #include "BSP.h"	 
 	 

@@ -6,7 +6,6 @@
 #endif
 
 #include "stm32f4xx.h" 	 
-#include "GpiosConfig.h"
 	 
 void I2c_Init(void);
 void I2cStart(void);

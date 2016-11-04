@@ -22,14 +22,14 @@ int DriverUI::Show(int operation)
 {
 	selVal = operation;
 	bsp->ClearLcd();
-	bsp->WriteLcd(0,2,(u8*)"*");
+	bsp->WriteLcd(2,0,(u8*)"*");
 	
-	bsp->WriteLcd(0,2,drvStr[selVal]);
-	bsp->WriteLcd(1,2,drvStr[selVal+1]);
+	bsp->WriteLcd(2,0,drvStr[selVal]);
+	bsp->WriteLcd(2,1,drvStr[selVal+1]);
 	bsp->WriteLcd(2,2,drvStr[selVal+2]);
 
-	bsp->WriteLcd(3,0,(u8*)"确定");
-	bsp->WriteLcd(3,12,(u8*)"取消");
+	bsp->WriteLcd(0,3,(u8*)"确定");
+	bsp->WriteLcd(12,3,(u8*)"取消");
 	return 0;
 }
 

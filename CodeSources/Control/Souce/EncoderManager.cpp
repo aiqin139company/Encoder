@@ -3,6 +3,7 @@
 ///Initialize
 int EncoderManager::Initialize()
 {
+	bEncoder = &CaptureTest;
 	return ENCODERSIZES-1;
 }
 

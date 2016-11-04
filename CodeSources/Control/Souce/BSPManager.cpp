@@ -11,6 +11,7 @@ BSPManager* BSPManager::Instance()
 ///BSP Init
 void BSPManager::BSP_Init()
 {
+	Delay_Init();
 	KEY_Init();
 	LED_Init();
 	LCD_Init();
@@ -22,7 +23,7 @@ void BSPManager::BSP_Init()
 ///KEY Init
 void BSPManager::KEY_Init()
 {
-
+	Key_Init();
 }
 
 
@@ -36,14 +37,14 @@ void BSPManager::LED_Init()
 ///LCD Init
 void BSPManager::LCD_Init()
 {
-
+	Lcd_Init();
 }
 
 
 ///UART Init
 void BSPManager::UART_Init()
 {
-
+	Uart_Init(230400);
 }
 
 
@@ -55,14 +56,14 @@ void BSPManager::Encoder_Init()
 
 
 ///Delay us
-void BSPManager::Delay_us(u32 timer)
+void BSPManager::Delay_US(u32 timer)
 {
 	Delay_us(timer);
 }
 
 
 ///Delay ms
-void BSPManager::Delay_ms(u32 timer)
+void BSPManager::Delay_MS(u32 timer)
 {
 	Delay_ms(timer);
 }
@@ -71,8 +72,7 @@ void BSPManager::Delay_ms(u32 timer)
 ///Read Key
 int BSPManager::ReadKey(u8 mode)
 {
-
-	return 0;
+	return Key_Scan(mode);
 }
 
 
@@ -87,7 +87,7 @@ int BSPManager::WriteLed(u8 LedStatus)
 ///Clear Lcd
 int BSPManager::ClearLcd()
 {
-
+	Lcd_Clear();
 	return 0;
 }
 
@@ -95,7 +95,7 @@ int BSPManager::ClearLcd()
 ///Write Lcd
 int BSPManager::WriteLcd(u8 x, u8 y, u8 *data)
 {
-
+	Lcd_Write_String(x,y,data);
 	return 0;
 }
 	

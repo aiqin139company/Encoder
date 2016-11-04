@@ -4,6 +4,7 @@
 ///Initialize
 int DriverManager::Initialize()
 {
+	bDrv = &Stepper;
 	return DRIVERSIZES-1;
 }
 

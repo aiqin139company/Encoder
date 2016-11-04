@@ -3,6 +3,7 @@
 ///Initialize
 int CommManager::Initialize()
 {
+	bComm = &SciComm;
 	return COMMSIZES-1;
 }
 
@@ -19,8 +20,8 @@ int CommManager::ChangeMsg(int selVal)
 {
 	switch ( (SelComm)selVal )
 	{
-		case sci 			: bComm = &SciComm; 			break;
-		default : break;
+		case sci : bComm = &SciComm; break;
+		default  : break;
 	}
 	return 0;
 }

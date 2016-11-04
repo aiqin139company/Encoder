@@ -33,8 +33,8 @@ private:
 public:
 	
 	void BSP_Init();
-	void Delay_us(u32 timer);
-	void Delay_ms(u32 timer);
+	void Delay_US(u32 timer);
+	void Delay_MS(u32 timer);
 	int ReadKey(u8 mode);
 	int WriteLed(u8 LedStatus);
 	int ClearLcd();
