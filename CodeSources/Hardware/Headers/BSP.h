@@ -12,6 +12,8 @@
 #include "Eeprom.h"
 #include "Key.h"
 #include "LCD12864.h"
+#include "Led.h"
+#include "PWM.h"
 	 
 /*
 	 Function: Delay Initialize

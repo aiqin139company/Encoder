@@ -27,7 +27,7 @@ private:
 	void LCD_Init();
 	void UART_Init();
 	void Encoder_Init();
-
+	void PWM_Init();
 	static BSPManager instance;
 
 public:
@@ -42,7 +42,7 @@ public:
 	int ReadUart(u8 size, u8 *data);
 	int WriteUart(u8 size, u8 *data);
 	int ReadEncoder();
-
+	int WritePWM(u16 psc, u16 arr, u16 comp);
 	static BSPManager* Instance();
 
 };

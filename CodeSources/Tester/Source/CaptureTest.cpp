@@ -3,7 +3,7 @@
 ///Start
 int CaptureTest::Start()
 {
-
+	
 	return 0;
 }
 

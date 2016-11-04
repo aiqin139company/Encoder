@@ -3,7 +3,7 @@
 ///Start
 int StepDirSignal::Start()
 {
-
+	bsp->WritePWM(168,100,50);
 	return 0;
 }
 
@@ -11,7 +11,7 @@ int StepDirSignal::Start()
 ///Stop
 int StepDirSignal::Stop()
 {
-
+	bsp->WritePWM(168,100,0);
 	return 0;
 }
 
