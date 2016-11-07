@@ -31,10 +31,3 @@ int DCBrushed::Disable()
 	return 0;
 }
 
-
-///IsFullSpeed
-int DCBrushed::IsFullSpeed()
-{
-	
-	return 0;
-}

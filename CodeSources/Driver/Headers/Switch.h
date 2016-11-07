@@ -12,7 +12,6 @@ public:
 	virtual int Stop();
 	virtual int Enable();
 	virtual int Disable();
-	virtual int IsFullSpeed();
 	
 };
 

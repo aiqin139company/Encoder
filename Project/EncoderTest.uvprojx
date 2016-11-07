@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>ARM_MATH_CM4,STM32F40XX,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\DeviceSupport\CMSIS;..\DeviceSupport\CMSIS\Include;..\DeviceSupport\SYS_NVIC;..\DeviceSupport\STM32F4xx_StdPeriph_Driver\inc;..\UnityTest\Src;..\UnityTest\Test;..\CodeSources\Control\Headers;..\CodeSources\Driver\Headers;..\CodeSources\Hardware\Headers;..\CodeSources\Tester\Headers;..\CodeSources\UIInterface\Headers;..\CodeSources\Communication\Headers</IncludePath>
+              <IncludePath>..\DeviceSupport\CMSIS;..\DeviceSupport\CMSIS\Include;..\DeviceSupport\SYS_NVIC;..\DeviceSupport\STM32F4xx_StdPeriph_Driver\inc;..\UnityTest\Src;..\UnityTest\Test;..\CodeSources\Control\Headers;..\CodeSources\Driver\Headers;..\CodeSources\Hardware\Headers;..\CodeSources\Tester\Headers;..\CodeSources\UIInterface\Headers;..\CodeSources\Communication\Headers;..\CodeSources\ControlBlocks</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -677,6 +677,16 @@
               <FileName>BSPManager.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>..\CodeSources\Control\Souce\BSPManager.cpp</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>ControlBlocks</GroupName>
+          <Files>
+            <File>
+              <FileName>PulseGen.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\CodeSources\ControlBlocks\PulseGen.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -31,10 +31,3 @@ int Stepper::Disable()
 	return 0;
 }
 
-
-///IsFullSpeed
-int Stepper::IsFullSpeed()
-{
-	
-	return 0;
-}

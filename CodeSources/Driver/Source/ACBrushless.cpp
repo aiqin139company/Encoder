@@ -31,11 +31,3 @@ int ACBrushed::Disable()
 	return 0;
 }
 
-
-///IsFullSpeed
-int ACBrushed::IsFullSpeed()
-{
-	
-	return 0;
-}
-

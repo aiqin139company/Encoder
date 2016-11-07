@@ -1,5 +1,13 @@
 #include "BaseDriver.h"
 
+///BaseDriver
+BaseDriver::BaseDriver()
+	: bsp(BSPManager::Instance()),
+		isFullSpeed(false)
+{
+}
+
+
 ///Start
 int BaseDriver::Start()
 {
@@ -33,10 +41,9 @@ int BaseDriver::Disable()
 
 
 ///IsFullSpeed
-int BaseDriver::IsFullSpeed()
+bool BaseDriver::IsFullSpeed()
 {
-	
-	return 0;
+	return isFullSpeed;
 }
 
 

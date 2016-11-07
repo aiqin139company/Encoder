@@ -1,6 +1,6 @@
 #include "ControlManager.h"
 
-//ControlManager
+///ControlManager
 ControlManager::ControlManager()
 	: runMode(homeSelectMode),
 		selectMode(noSelect),
@@ -253,7 +253,11 @@ inline int ControlManager::Monitor()
 {
 	if ( selectStartTest == selectMode )
 	{
-		if ( bDrv->IsFullSpeed() )
+		if ( !bDrv->IsFullSpeed() )
+		{
+			bDrv->Enable();
+		}
+		else
 		{
 			bEncoder->Start();
 		}

@@ -16,7 +16,7 @@ void BSPManager::BSP_Init()
 	LED_Init();
 	LCD_Init();
 	UART_Init();
-	Encoder_Init();
+	ENCODER_Init();
 	PWM_Init();
 }
 
@@ -50,7 +50,7 @@ void BSPManager::UART_Init()
 
 
 ///Encoder Init
-void BSPManager::Encoder_Init()
+void BSPManager::ENCODER_Init()
 {
 
 }
@@ -59,7 +59,7 @@ void BSPManager::Encoder_Init()
 ///PWM Init
 void BSPManager::PWM_Init()
 {
-	Pwm_Init(168,100);		//100khz
+	Pwm_Init(10,168);		//100khz
 }
 
 

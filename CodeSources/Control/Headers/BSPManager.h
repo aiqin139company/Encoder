@@ -26,7 +26,7 @@ private:
 	void LED_Init();
 	void LCD_Init();
 	void UART_Init();
-	void Encoder_Init();
+	void ENCODER_Init();
 	void PWM_Init();
 	static BSPManager instance;
 

@@ -31,10 +31,3 @@ int Switch::Disable()
 	return 0;
 }
 
-
-///IsFullSpeed
-int Switch::IsFullSpeed()
-{
-	
-	return 0;
-}

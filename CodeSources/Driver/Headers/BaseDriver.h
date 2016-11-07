@@ -9,12 +9,15 @@ private:
 public:
 	
 	BSPManager* bsp;
-	BaseDriver() : bsp(BSPManager::Instance()) {}
+	bool isFullSpeed;
+
+	BaseDriver();
+	bool IsFullSpeed();
+	
 	virtual int Start();
 	virtual int Stop();
 	virtual int Enable();
 	virtual int Disable();
-	virtual int IsFullSpeed();
 
 };
 
